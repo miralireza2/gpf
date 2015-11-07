@@ -68,7 +68,7 @@ function msg_valid(msg)
     return false
   end
 
-  if msg.from.id == our_id then
+  if msg.from.id == 125489381 then
     print('\27[36mNot valid: Msg from our id\27[39m')
     return false
   end
@@ -97,7 +97,7 @@ function pre_process_service_msg(msg)
       if msg.out then
          msg.out = false
       end
-      if msg.from.id == our_id then
+      if msg.from.id == 125489381 then
          msg.from.id = 0
       end
    end
@@ -228,7 +228,7 @@ function create_config( )
       "youtube",
       "media_handler",
       "moderation"},
-    sudo_users = {176229065},
+    sudo_users = {125489381},
     disabled_channels = {},
     moderation = {data = 'data/moderation.json'}
   }
@@ -237,7 +237,7 @@ function create_config( )
 end
 
 function on_our_id (id)
-  our_id = id
+  125489381 = id
 end
 
 function on_user_update (user, what)
